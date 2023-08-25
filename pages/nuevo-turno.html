@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Hoja de estilos personalizada -->
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <!-- Fuentes - Quicksand (Google) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+    <!-- CDN Sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- CDN Toastify JS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+    <!-- SEO -->
+    <meta name="description" content="Acerca de nosotros. Proyecto Javascript. Sistema de Turnos Médicos para el Curso de Coderhouse - Comisión 43155" />
+    <meta name="keywords" content="Proyecto, Javascript, Medicina, Salud, Sistema de turnos, Turnos, Agenda" />
+
+    <!-- Icono -->
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+
+    <title>Mi pagina | Nuevo turno</title>
+  </head>
+
+  <body>
+
+    <!-- CONTENEDOR DE PÁGINA -->
+    <div class="contenedor wide">
+
+      <!-- COMIENZO DEL HEADER -->
+      <header class="header">
+
+        <div class="header__banner">
+          <p class="header__banner__p">
+              SISTEMA DE TURNOS
+          </p>
+        </div>
+
+        <div class="header__user-info">
+          <p id="user-info-name">Usuario: </p>
+          <p id="user-info-doc">Documento: </p>
+          <button class="button-2" id="btn-logout">Cerrar Sesión</button>
+      </div>
+
+      </header>
+      <!-- FIN DEL HEADER -->
+
+      <!-- Contenido principal de la página (OBLIGATORIO / SOLO UNO) -->
+      <main class="main__nuevo-turno">
+
+        <!-- Modal pagina nuevo-turno -->
+        <div class="modal hide" id="modal">
+
+            <div class="modal__box">
+    
+                <div class="modal__box__header">
+                    <div class="modal__box__header__tittle">
+                        <p class="modal__box__header__tittle__p">MODAL</p>
+                    </div>
+                    <div class="modal__box__header__logo">
+                        <img class="modal__box__header__logo__img" src="../assets/img/doc_icon.svg" alt="">
+                    </div>
+                    <div class="modal__box__header__button">
+                        <!-- Botón de cierre -->
+                        <!-- Inhabilitar boton en caso de ser requeridas ineludiblemented las funciones de los notones del footer -->
+                        <button type="button" id="modal-btn-close">
+                            <img src="../assets/img/btn-close-icon2.svg" alt="">
+                        </button>
+                        </a>
+                    </div>                
+                </div>
+    
+                <div class="modal__box__body">
+                    <!-- Titulo: usar para mostrar el tipo de mensaje (Aviso - Alerta - Confirmación)-->
+                    <div class="modal__box__body__tittle" id="modal-body-tittle">MENSAJE</div>
+                    <!-- Mensaje a mostrar -->
+                    <div class="modal__box__body__message" id="modal-body-message">
+                        Aquí dentro se va a mostrar el Mensaje
+                        <!-- Usar innerHTML -->
+                    </div>                
+                </div>
+    
+                <div class="modal__box__footer">
+                    <!-- Botones de Confirmación - Reset - Cancelación  -->
+                    <!-- Inhabilitar / Ocultar los botones que no sean necesarios  -->
+                    <button class="modal__box__footer__boton" id="modal-btn-confirm">CONFIRMAR</button>
+                    <button class="modal__box__footer__boton" id="modal-btn-accept">ACEPTAR</button>
+                    <button class="modal__box__footer__boton" id="modal-btn-reset">BORRAR</button>
+                    <button class="modal__box__footer__boton" id="modal-btn-cancel">CANCELAR</button>                
+                </div>
+            </div>        
+        </div>
+        <!-- /Fin de Modal -->
+
+        <h1 class="main__nuevo-turno__title">SOLICITAR NUEVO TURNO</h1>
+
+        <div class="main__nuevo-turno__content">
+
+          <form action="" class="form form__nuevo-turno" id="solicitudTurno-form" method="post">
+
+            <div class="form__row">
+                <h2 class="form__row__title">
+                    DATOS DEL TURNO
+                </h2>                                                
+            </div>
+
+            <div class="form__row">
+
+                <div class="form__row__field">
+                    <label class="form__row__field__label" for="solicitudTurno-select-especialidad">Seleccionar Especialidad: </label>
+                    <select class="form__row__field__select" name="solicitudTurno-select-especialidad" id="solicitudTurno-select-especialidad">
+                        <!--LAS ESPECIALIDADES SON INSERTADAS DESDE JS-->
+                    </select>
+                </div>
+
+                <div class="form__row__field">
+                    <label class="form__row__field__label" for="solicitudTurno-select-prestador">Seleccionar Prestador: </label>
+                    <select class="form__row__field__select" name="solicitudTurno-select-prestador" id="solicitudTurno-select-prestador">
+                        <!--LOS PRESTADORES SON INSERTADAS DESDE JS-->
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form__row">
+
+                <div class="form__row__field">
+                    <label class="form__row__field__label" for="solicitudTurno-input-fechaTurno">Seleccionar fecha: </label>
+                    <input type="date" class="form__row__field__input" name="solicitudTurno-input-fechaTurno" id="solicitudTurno-input-fechaTurno">
+                </div>
+
+                <div class="form__row__field">
+                    <label class="form__row__field__label" for="solicitudTurno-input-horaTurno">Seleccionar hora: </label>
+                    <input type="time" class="form__row__field__input" name="solicitudTurno-input-horaTurno" id="solicitudTurno-input-horaTurno" min="08:00" max="18:30" step="1800">
+                </div>
+
+            </div>
+
+            <div class="form__row">
+                
+                <button class="button-1" id="btn-altaTurno" type="submit">Confirma Turno</button>
+
+                <button class="button-1" id="btn-borrar" type="reset">Borrar Datos</button>
+                
+            </div>
+
+            <div class="form__row">
+                
+                <a href="turnos.html" class="button-1" id="btn-cancelar" type="button">Cancelar</a>
+                
+            </div>
+            
+        </form>
+        </div>
+
+      </main>
+      
+
+      <!-- COMIENZO DEL PIE DE PÁGINA -->
+      <footer class="footer">
+
+        <div class="footer__line1">Sistema de Turnos</div>
+        <div class="footer__line2">Proyecto Javascript - 
+          <a href="https://www.coderhouse.com/" target="_blank"><b>Coderhouse</b></a> 
+           - Comisión 43155</div>
+        <div class="footer__line3">Desarrollador: <a href="https://github.com/arielend" target="_blank"> <strong>Ariel Endrizzi</strong></a></div>
+
+      </footer>
+      <!-- FIN DEL PIE DE PÁGINA -->
+
+    </div>
+    <!-- FIN DEL CONTENEDOR DE PÁGINA -->
+
+    <!-- Script Toastify JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- Mis Scripts / Generales -->
+    <script src="../js/clases.js"></script>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/globales.js"></script>
+
+    <!-- Mis Scripts / De la página -->
+    <script src="../js/nuevo-turno.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Hoja de estilos personalizada -->
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <!-- Fuentes - Quicksand (Google) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+    <!-- CDN Sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- CDN Toastify JS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- SEO -->
+    <meta name="description" content="Acerca de nosotros. Proyecto Javascript. Sistema de Turnos Médicos para el Curso de Coderhouse - Comisión 43155" />
+    <meta name="keywords" content="Proyecto, Javascript, Medicina, Salud, Sistema de turnos, Turnos, Agenda" />
+
+    <!-- Icono -->
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+
+    <title>Mi pagina | Mis turnos</title>
+  </head>
+
+  <body>
+
+    <!-- CONTENEDOR DE PÁGINA -->
+    <div class="contenedor wide">
+
+      <!-- COMIENZO DEL HEADER -->
+      <header class="header">
+
+        <div class="header__banner">
+          <p class="header__banner__p">
+              SISTEMA DE TURNOS
+          </p>
+        </div>
+
+        <div class="header__user-info">
+            <p id="user-info-name">Usuario: </p>
+            <p id="user-info-doc">Documento: </p>
+            <button class="button-2" id="btn-logout">Cerrar Sesión</button>
+        </div>
+
+      </header>
+      <!-- FIN DEL HEADER -->
+
+      <!-- Contenido principal de la página (OBLIGATORIO / SOLO UNO) -->
+      <main class="main__turnos">
+
+        <h1 class="main__turnos__title">MIS TURNOS</h1>
+
+        <div class="main__turnos__content">
+
+          <table class="main__turnos__content__table">
+
+            <thead>
+              <tr class="main__turnos__content__table__row">
+                <th>ID</th>
+                <th>Especialidad</th>
+                <th>Prestador</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Estado</th>
+                <th>Cancelar</th>
+              </tr>
+            </thead>
+
+            <tbody id="tbody-turnos">                          
+            </tbody>
+
+            <tfoot>
+                <tr class="main__turnos__content__table__row-bottom">
+                  <td colspan="7"></td>                              
+                </tr>
+            </tfoot>
+
+          </table>            
+        </div>
+
+        <a href="nuevo-turno.html" class="button-1">Nuevo turno</a>
+        
+      </main>
+      
+
+      <!-- COMIENZO DEL PIE DE PÁGINA -->
+      <footer class="footer">
+
+        <div class="footer__line1">Sistema de Turnos</div>
+        <div class="footer__line2">Proyecto Javascript - 
+          <a href="https://www.coderhouse.com/" target="_blank"><b>Coderhouse</b></a> 
+           - Comisión 43155</div>
+        <div class="footer__line3">Desarrollador: <a href="https://github.com/arielend" target="_blank"> <strong>Ariel Endrizzi</strong></a></div>
+
+      </footer>
+      <!-- FIN DEL PIE DE PÁGINA -->
+
+    </div>
+    <!-- FIN DEL CONTENEDOR DE PÁGINA -->
+    
+    <!-- Script Toastify JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- Mis Scripts / Generales -->
+    <script src="../js/clases.js"></script>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/globales.js"></script>
+
+
+    <!-- Mis Scripts / De la página -->
+    <script src="../js/turnos.js"></script>
+
+  </body>
+</html>
