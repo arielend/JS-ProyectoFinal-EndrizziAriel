@@ -1,0 +1,14 @@
+{
+  "name": "js-proyectofinal-endrizzi",
+  "version": "1.0.0",
+  "description": "Proyecto Final Javascript - Coderhouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ariel Endrizzi",
+  "license": "ISC",
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0"
+  }
+}

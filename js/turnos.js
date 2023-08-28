@@ -1,7 +1,10 @@
+//Variables
+let pagina = document;
+
 //Variables de turnos.html
 let tableBodyTurnos = document.getElementById("tbody-turnos");
 
-let usuarioActivo = JSON.parse(sessionStorage.getItem("PacienteActivo"));
+let usuarioActivo = undefined;
 pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
 especialidades = JSON.parse(localStorage.getItem("especialidades")) || [];
 medicos = JSON.parse(localStorage.getItem("medicos")) || [];
@@ -13,6 +16,21 @@ let userInfoName = document.getElementById("user-info-name");
 let userInfoDoc = document.getElementById("user-info-doc");
 
 //Funciones
+function validarAcceso(){
+    if(sessionStorage.getItem("PacienteActivo")){
+        usuarioActivo = JSON.parse(sessionStorage.getItem("PacienteActivo"));
+        mostrarDatosUsuario();
+        mostrarTurnosUsuario();
+    }
+    else
+    {
+        let title = "ATENCIÓN";
+        let message = "Acceso restringido. Ingrese sus credenciales de acceso para ver sus turnos.";
+        mostrarModal(title, message, true, true, true, true, true);
+        setTimeout(()=>{location.href = "../index.html"}, 2500);
+    };
+}
+
 function mostrarDatosUsuario(){
     userInfoName.innerText += ` ${usuarioActivo.apellido} ${usuarioActivo.nombres}`;
     userInfoDoc.innerText += ` ${usuarioActivo.documento}`;
@@ -117,9 +135,5 @@ function cancelarTurno(e){
 }
 
 //Handlers
+pagina.addEventListener("DOMContentLoaded", validarAcceso);
 btnCerrarSesion.addEventListener("click", cerrarSesion);
-
-
-
-mostrarDatosUsuario();
-mostrarTurnosUsuario();

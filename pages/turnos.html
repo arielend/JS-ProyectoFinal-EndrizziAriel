@@ -55,6 +55,50 @@
       <!-- Contenido principal de la página (OBLIGATORIO / SOLO UNO) -->
       <main class="main__turnos">
 
+        <!-- Modal pagina registro -->
+        <div class="modal hide" id="modal">
+
+          <div class="modal__box">
+  
+              <div class="modal__box__header">
+                  <div class="modal__box__header__tittle">
+                      <p class="modal__box__header__tittle__p">MODAL</p>
+                  </div>
+                  <div class="modal__box__header__logo">
+                      <img class="modal__box__header__logo__img" src="../assets/img/doc_icon.svg" alt="">
+                  </div>
+                  <div class="modal__box__header__button">
+                      <!-- Botón de cierre -->
+                      <!-- Inhabilitar boton en caso de ser requeridas ineludiblemented las funciones de los notones del footer -->
+                      <button type="button" id="modal-btn-close">
+                          <img src="../assets/img/btn-close-icon2.svg" alt="">
+                      </button>
+                      </a>
+                  </div>                
+              </div>
+  
+              <div class="modal__box__body">
+                  <!-- Titulo: usar para mostrar el tipo de mensaje (Aviso - Alerta - Confirmación)-->
+                  <div class="modal__box__body__tittle" id="modal-body-tittle">MENSAJE</div>
+                  <!-- Mensaje a mostrar -->
+                  <div class="modal__box__body__message" id="modal-body-message">
+                      Aquí dentro se va a mostrar el Mensaje
+                      <!-- Usar innerHTML -->
+                  </div>                
+              </div>
+  
+              <div class="modal__box__footer">
+                  <!-- Botones de Confirmación - Reset - Cancelación  -->
+                  <!-- Inhabilitar / Ocultar los botones que no sean necesarios  -->
+                  <button class="modal__box__footer__boton" id="modal-btn-confirm">CONFIRMAR</button>
+                  <button class="modal__box__footer__boton" id="modal-btn-accept">ACEPTAR</button>
+                  <button class="modal__box__footer__boton" id="modal-btn-reset">BORRAR</button>
+                  <button class="modal__box__footer__boton" id="modal-btn-cancel">CANCELAR</button>                
+              </div>
+          </div>        
+        </div>
+        <!-- /Fin de Modal -->
+
         <h1 class="main__turnos__title">MIS TURNOS</h1>
 
         <div class="main__turnos__content">
