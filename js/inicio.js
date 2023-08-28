@@ -1,14 +1,14 @@
 const pacienteDefault = new Paciente (1, "Sotelo", "Andrés", "22222222", "56", "M", "sotelo@mail.com", "1234");
 pacientes.push(pacienteDefault);
 
-const especialidad1 = new Especialidad(1, "E001", "Clínica médica");
-const especialidad2 = new Especialidad(2, "E002", "Endocrinología");
-const especialidad3 = new Especialidad(3, "E003", "Ginecología");
-const especialidad4 = new Especialidad(4, "E004", "Oftalmología");
-const especialidad5 = new Especialidad(5, "E005", "Ortopedia");
-const especialidad6 = new Especialidad(6, "E006", "Pediatría");
+// const especialidad1 = new Especialidad(1, "E001", "Clínica médica");
+// const especialidad2 = new Especialidad(2, "E002", "Endocrinología");
+// const especialidad3 = new Especialidad(3, "E003", "Ginecología");
+// const especialidad4 = new Especialidad(4, "E004", "Oftalmología");
+// const especialidad5 = new Especialidad(5, "E005", "Ortopedia");
+// const especialidad6 = new Especialidad(6, "E006", "Pediatría");
 
-especialidades.push(especialidad1, especialidad2, especialidad3, especialidad4, especialidad5, especialidad6);
+// especialidades.push(especialidad1, especialidad2, especialidad3, especialidad4, especialidad5, especialidad6);
 
 const medico1 = new Medico(1, "López", "Juan Carlos", "MP 23456", 1);
 const medico2 = new Medico(2, "Martínez", "César Alfredo", "MP 21659", 2);
@@ -35,7 +35,3 @@ localStorage.getItem("medicos") ? medicos = JSON.parse(localStorage.getItem("med
 localStorage.getItem("especialidades") ? especialidades = JSON.parse(localStorage.getItem("especialidades")) : localStorage.setItem("especialidades", especialidadesJSON);
 localStorage.getItem("pacientes") ? pacientes = JSON.parse(localStorage.getItem("pacientes")) : localStorage.setItem("pacientes", pacientesJSON);
 localStorage.getItem("turnos") ? turnos = JSON.parse(localStorage.getItem("turnos")) : localStorage.setItem("turnos", turnosJSON);
-
-console.log(turnos);
-console.log(localStorage.getItem("turnos"));
-console.log("Hola");

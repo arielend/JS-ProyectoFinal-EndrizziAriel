@@ -102,15 +102,22 @@ function verificarSeleccionPrestador(){
     }
 }
 
+//Uso de fetch para leer los datos de las especialidades desde archivo JSON local
 function cargarSelectEspecialidades(){
-    selectEspecialidades.innerHTML += `
-    <option value="0"> Elija una opción </option>
-    `;
-    especialidades.forEach((especialidad)=>{
-        selectEspecialidades.innerHTML += `
-        <option value="${especialidad.id}"> ${especialidad.nombreEspecialidad} </option>
-        `;        
-    });
+    fetch("../js/listadoEspecialidades.json")
+    .then(
+        (response) => response.json()    
+    )
+    .then(
+        (data) => {
+            for (especialidad in data){
+                let option = document.createElement("option");
+                option.setAttribute("value", data[especialidad].id);
+                option.textContent = data[especialidad].nombreEspecialidad;
+                selectEspecialidades.appendChild(option);            
+            }
+        }
+    )
 }
 
 function cargarSelectPrestadores(){

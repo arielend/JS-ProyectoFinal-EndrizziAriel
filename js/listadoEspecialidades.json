@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+        "codigo":"E001",
+        "nombreEspecialidad":"Clínica médica"
+    },
+    {
+        "id":2,
+        "codigo":"E002",
+        "nombreEspecialidad":"Endocrinología"
+    },
+    {
+        "id":3,
+        "codigo":"E003",
+        "nombreEspecialidad":"Ginecología"
+    },
+    {
+        "id":4,
+        "codigo":"E004",
+        "nombreEspecialidad":"Oftalmología"
+    },
+    {
+        "id":5,
+        "codigo":"E005",
+        "nombreEspecialidad":"Ortopedia"
+    },
+    {
+        "id":6,
+        "codigo":"E006",
+        "nombreEspecialidad":"Pediatría"
+    },
+    {
+        "id":7,
+        "codigo": "E007",
+        "nombreEspecialidad": "Traumatología"
+    },
+    {
+        "id":8,
+        "codigo": "E008",
+        "nombreEspecialidad": "Dermatología"
+    }
+]
