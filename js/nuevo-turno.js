@@ -104,6 +104,7 @@ function verificarSeleccionPrestador(){
 
 //Uso de fetch para leer los datos de las especialidades desde archivo JSON local
 function cargarSelectEspecialidades(){
+    selectEspecialidades.innerHTML += `<option value="0"> Elija una opción </option>`;
     fetch("../js/listadoEspecialidades.json")
     .then(
         (response) => response.json()    
@@ -206,7 +207,7 @@ function confirmarTurno(e){
         
         Swal.fire({
             title: 'Atención!',
-            text: `¿Confirma la carga del turno del día ${fechaTurno} con el/la doctor/a ${selectPrestadores.options[selectPrestadores.selectedIndex].text}?`,
+            text: `¿Confirma turno del día ${fechaTurno} a las ${horaTurno} horas, con el/la doctor/a ${selectPrestadores.options[selectPrestadores.selectedIndex].text}?`,
             icon: 'question',
             confirmButtonText: 'Si',
             confirmButtonColor: '#0D7986',
@@ -222,7 +223,7 @@ function confirmarTurno(e){
                 enviarEmailTurno();
 
                 Toastify({
-                    text: `Turno confirmado. Revise su casilla de mail.`,
+                    text: `Turno confirmado. Revise su casilla de correos.`,
                     style: {
                         background: "linear-gradient(to right, #78D2DB, #51B1BB)",
                         fontSize: "1.8rem",

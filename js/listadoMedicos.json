@@ -1,0 +1,58 @@
+[  
+    {
+        "id": 1,
+        "apellido": "López",
+        "nombres": "Juan Carlos",
+        "matricula": "MP 23456",
+        "idEspecialidad": 1
+    },
+    {
+        "id": 2,
+        "apellido": "Martínez",
+        "nombres": "César Alfredo",
+        "matricula": "MP 21659",
+        "idEspecialidad": 2
+    },
+    {
+        "id": 3,
+        "apellido": "Sánchez",
+        "nombres": "José Sebastián",
+        "matricula": "MP 24351",
+        "idEspecialidad": 3
+    },
+    {
+        "id": 4,
+        "apellido": "Osorio",
+        "nombres": "María Ines",
+        "matricula": "MP 21074",
+        "idEspecialidad": 4
+    },
+    {
+        "id": 5,
+        "apellido": "Ibáñez",
+        "nombres": "Margarita",
+        "matricula": "MP 18744",
+        "idEspecialidad": 5
+    },
+    {
+        "id": 6,
+        "apellido": "Lagos",
+        "nombres": "María Eugenia",
+        "matricula": "MP 26339",
+        "idEspecialidad": 6
+    },
+    {
+        "id": 7,
+        "apellido": "Chiclana",
+        "nombres": "María Antonia",
+        "matricula": "MP 21773",
+        "idEspecialidad": 7
+    },
+    {
+        "id": 8,
+        "apellido": "Ordoñez",
+        "nombres": "Victor Samuel",
+        "matricula": "MP 12802",
+        "idEspecialidad": 8
+    }
+]

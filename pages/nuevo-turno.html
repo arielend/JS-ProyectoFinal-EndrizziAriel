@@ -128,7 +128,7 @@
                 </div>
 
                 <div class="form__row__field">
-                    <label class="form__row__field__label" for="solicitudTurno-select-prestador">Seleccionar Prestador: </label>
+                    <label class="form__row__field__label" for="solicitudTurno-select-prestador">Seleccionar Médico: </label>
                     <select class="form__row__field__select" name="solicitudTurno-select-prestador" id="solicitudTurno-select-prestador">
                         <!--LOS PRESTADORES SON INSERTADAS DESDE JS-->
                     </select>
@@ -145,25 +145,44 @@
 
                 <div class="form__row__field">
                     <label class="form__row__field__label" for="solicitudTurno-input-horaTurno">Seleccionar hora: </label>
-                    <input type="time" class="form__row__field__input" name="solicitudTurno-input-horaTurno" id="solicitudTurno-input-horaTurno" min="08:00" max="18:30" step="1800">
+                    <input type="time" class="form__row__field__input" name="solicitudTurno-input-horaTurno" id="solicitudTurno-input-horaTurno" list="horarios" min="08:00" max="18:30" step="1800">
+                    <datalist id="horarios">
+                        <option value="08:00">
+                        <option value="08:30">
+                        <option value="09:00">
+                        <option value="09:30">
+                        <option value="10:00">
+                        <option value="10:30">
+                        <option value="11:00">
+                        <option value="11:30">
+                        <option value="12:00">
+                        <option value="12:30">
+                        <option value="13:00">
+                        <option value="13:30">
+                        <option value="14:00">
+                        <option value="14:30">
+                        <option value="15:00">
+                        <option value="15:30">
+                        <option value="16:00">
+                        <option value="16:30">                    
+                        <option value="17:00">
+                        <option value="17:30">
+                        <option value="18:00">
+                        <option value="18:30">
+                    </datalist>
                 </div>
 
             </div>
 
-            <div class="form__row">
-                
+            <div class="form__row">                
                 <button class="button-1" id="btn-altaTurno" type="submit">Confirma Turno</button>
-
-                <button class="button-1" id="btn-borrar" type="reset">Borrar Datos</button>
-                
+                <button class="button-1" id="btn-borrar" type="reset">Borrar Datos</button>                
             </div>
 
-            <div class="form__row">
-                
-                <a href="turnos.html" class="button-1" id="btn-cancelar" type="button">Cancelar</a>
-                
-            </div>  
-            
+            <div class="form__row">                
+                <a href="turnos.html" class="button-1" id="btn-cancelar" type="button">Cancelar</a>                
+            </div>            
+
         </form>
         </div>
 
