@@ -2,8 +2,7 @@ const pacienteDefault = new Paciente (1, "Sotelo", "Andrés", "22222222", "56", 
 pacientes.push(pacienteDefault);
 
 //Carga de datos desde archivos locales .json
-//Se agrega a la ruta "/blob/main" por el cambio en el deployment de github
-fetch("../JS-ProyectoFinal-Endrizzi/blob/main/js/listadoMedicos.json")
+fetch("../JS-ProyectoFinal-Endrizzi/js/listadoMedicos.json")
 .then(
     (response) => response.json()    
 )
@@ -17,7 +16,7 @@ fetch("../JS-ProyectoFinal-Endrizzi/blob/main/js/listadoMedicos.json")
     }
 )
 
-fetch("../JS-ProyectoFinal-Endrizzi/blob/main/js/listadoEspecialidades.json")
+fetch("../JS-ProyectoFinal-Endrizzi/js/listadoEspecialidades.json")
 .then(
     (response) => response.json()
 )
