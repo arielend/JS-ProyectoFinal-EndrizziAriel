@@ -2,7 +2,7 @@ const pacienteDefault = new Paciente (1, "Sotelo", "Andrés", "22222222", "56", 
 pacientes.push(pacienteDefault);
 
 //Carga de datos desde archivos locales .json
-fetch("../js/listadoMedicos.json")
+fetch("./js/listadoMedicos.json")
 .then(
     (response) => response.json()    
 )
@@ -16,7 +16,7 @@ fetch("../js/listadoMedicos.json")
     }
 )
 
-fetch("../js/listadoEspecialidades.json")
+fetch("./js/listadoEspecialidades.json")
 .then(
     (response) => response.json()
 )
